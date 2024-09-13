@@ -1,0 +1,41 @@
+<section class="container p-3 my-2 shadow rounded-3">
+  <h2 class="text-center text-main">shippingAddress</h2>
+  <form [formGroup]="shippingAddress" (ngSubmit)="orderSubmit()">
+    <div>
+      <label for="details">details</label>
+      <input
+        type="text"
+        id="details"
+        class="form-control"
+        formControlName="details"
+      />
+    </div>
+    <div>
+      <label for="phone">phone</label>
+      <input
+        type="tel"
+        id="phone"
+        class="form-control"
+        formControlName="phone"
+      />
+    </div>
+    <div>
+      <label for="city" class="form-label">City:</label>
+      <input
+        class="form-control"
+        formControlName="city"
+        list="datalistOptions"
+        id="city"
+        placeholder="Type to search..."
+      />
+      <datalist id="datalistOptions">
+        <option value="San Francisco"></option>
+        <option value="New York"></option>
+        <option value="Seattle"></option>
+        <option value="Los Angeles"></option>
+        <option value="Cairo"></option>
+      </datalist>
+    </div>
+    <button class="btn btn-main mt-4 py-2">Check Out</button>
+  </form>
+</section>

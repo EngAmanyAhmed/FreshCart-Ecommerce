@@ -1,0 +1,83 @@
+<section class="container bg-main-light show p-5 my-2 rounded-4 container">
+  <h1 class="h2 text-main">{{ "Login.login Now" | translate }}</h1>
+  <form [formGroup]="loginfom" (ngSubmit)="loginSubmit()">
+    <div class="my-2">
+      <label for="email">{{ "Login.Email:" | translate }}</label>
+      <input
+        [ngClass]="{
+          'is-valid':
+            !loginfom.get('email')?.errors &&
+            (loginfom.get('email')?.touched || loginfom.get('email')?.dirty),
+          'is-invalid':
+            loginfom.get('email')?.errors &&
+            (loginfom.get('email')?.touched || loginfom.get('email')?.dirty)
+        }"
+        class="form-control"
+        formControlName="email"
+        id="email"
+        type="text"
+      />
+      @if (loginfom.get('email')?.errors
+      &&(loginfom.get("email")?.touched||loginfom.get("email")?.dirty)) {
+      <div class="alert alert-danger w-50">
+        @if (loginfom.get("email")?.getError('required')) {
+        <p class="m-0">{{ "Login.email is required" | translate }}</p>
+        } @else if (loginfom.get("email")?.getError('email')) {
+        <p class="m-0">{{ "Login.Enter Valid Email" | translate }}</p>
+        }
+      </div>
+      }
+    </div>
+    <div class="my-2">
+      <label for="password"> {{ "Login.password" | translate }} </label>
+      <input
+        [ngClass]="{
+          'is-valid':
+            !loginfom.get('password')?.errors &&
+            (loginfom.get('password')?.touched ||
+              loginfom.get('password')?.dirty),
+          'is-invalid':
+            loginfom.get('password')?.errors &&
+            (loginfom.get('password')?.touched ||
+              loginfom.get('password')?.dirty)
+        }"
+        type="password"
+        id="password"
+        class="form-control"
+        formControlName="password"
+      />
+      @if (loginfom.get('password')?.errors
+      &&(loginfom.get("password")?.touched||loginfom.get("password")?.dirty)) {
+      <div class="alert alert-danger w-50">
+        @if (loginfom.get("password")?.getError('required')) {
+        <p class="m-0">{{ "Login.password is requiredl" | translate }}</p>
+        } @else if (loginfom.get("password")?.getError('pattern')) {
+        <p class="m-0">
+          {{ "Login.It must consist of at least 6 letters" | translate }}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <span class="cr p-3">
+        <a routerLink="/forgotPassword" class="p-2 link-info">{{
+          "Login.forgot Password" | translate
+        }}</a>
+      </span>
+      <button
+        [disabled]="loginfom.invalid || isLoading"
+        type="submit"
+        class="btn-main d-block ms-auto"
+      >
+        {{ "Login.login" | translate }}@if (isLoading) {<span
+          ><i class="fa-solid fa-arrows-spin fa-spin"></i></span
+        >}
+      </button>
+    </div>
+
+    @if (msgError) {
+    <p class="alert alert-danger w-50 m-0">{{ msgError }}</p>
+    }
+  </form>
+</section>

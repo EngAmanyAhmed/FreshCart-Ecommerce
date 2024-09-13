@@ -1,0 +1,87 @@
+{
+    "navbar":{
+        "Home":"Home",
+        "wish list":"wish list",
+        "Product":"Product",
+        "Categories":"Categories",
+        "brands":"Brands",
+        "SingOut":"SingOut",
+        "lang":"lang",
+        "Register":"Register" ,
+        "Login":"Login"
+
+
+    },
+    
+    "home":{
+        "popular Categorr":"popular Categor",
+        "popular product":"popular product",
+        "Search By Name":"Search By Name"
+
+    }
+,
+"footer":{
+    "Get The FreshCart App":"Get The FreshCart App",
+    "We Will Send You a Link, Open it on Your Phone to download the app":"We Will Send You a Link, Open it on Your Phone to download the app "
+    ,"Email":"Email",
+    "Share App Link":"Search App Link",
+    "Payment partner":"Payment partner",
+    "Get Deliveries with FreshCart":"Get Deliveries with FreshCart"
+}
+,"wish list":{
+    "My Wish List":"My Wish List"
+}
+,"Product":{
+   "popular product:":"popular product:"
+   ,"Search By Name":"Search By Name"
+
+},
+"Categories":{
+"pupler Categories:":"pupler Categories:"
+},
+"brands":{
+    "All Brands:":"All Brands:"
+
+
+},"Login":{
+    "login Now":"login Now:"
+    ,"Email:":"Email:",
+    "password":"password:",
+    "forgot Password":"forgot Password"
+    ,"login":"Login",
+    "Don't have an account?":"Don't have an account?",
+    "No problem, you can easily create a new account to purchase quickly and track your orders":"No problem, you can easily create a new account to purchase quickly and track your orders"
+    ,"// Quick and easy purchase":"// Quick and easy purchase"
+    ,"// Track your orders":"// Track your orders"
+    ,"// Installment tracking":"// Installment tracking",
+    "signup":"SignUp",
+    "email is required":"email is required",
+    "Enter Valid Email":"Enter Valid Email",
+    "password is required":"password is required",
+    "It must consist of at least 6 letters":"It must consist of at least 6 letters"
+
+
+
+},"register":{
+    "name":"Name",
+    "Name is required":"Name is required",
+    "It must consist of at least 3 letters":"It must consist of at least 3 letters",
+    "Email":"Email",
+    "email is required":"email is required",
+    "Enter Valid Email":"Enter Valid Email",
+    "password":"password:",
+    "password is required":"password is required",
+    "It must consist of at least 6 letters":"It must consist of at least 6 letters"
+    ,"rePassword":"RePassword",
+    "Password confirmation is incorrect":"Password confirmation is incorrect",
+    "phone":"Phone",
+    "Enter Valid phone":"Enter Valid phone",
+    "Register":"Register"
+
+
+
+
+
+}
+
+}

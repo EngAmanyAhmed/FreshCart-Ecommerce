@@ -1,0 +1,150 @@
+<!-- Siled_main -->
+
+<section>
+  <div class="row g-0">
+    <div class="col-md-8">
+      <owl-carousel-o [options]="customOptionsMain">
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img1.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img2.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img3.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img4.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img5.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+        <ng-template carouselSlide>
+          <img
+            src="./assets/images/img6.avif"
+            class="w-100"
+            height="300px"
+            alt=""
+          />
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+    <div class="col-md-4">
+      <img
+        src="./assets/images/grocery-banner.png"
+        class="w-100"
+        height="150px"
+        alt=""
+      />
+      <img
+        src="./assets/images/grocery-banner-2.jpeg"
+        class="w-100"
+        height="150px"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+<!-- siledar -->
+<section class="my-2">
+  <h2 class="text-main">{{ "home.popular Categorr" | translate }}</h2>
+  <owl-carousel-o [options]="customOptionsCat">
+    @for (cat of categoriLyst; track cat._id) {
+    <ng-template carouselSlide>
+      <div>
+        <img [src]="cat.image" height="250px" class="w-100" [alt]="cat.name" />
+        <h3 class="h6 text-main">{{ cat.name }}</h3>
+      </div>
+    </ng-template>
+    }
+  </owl-carousel-o>
+</section>
+
+<!-- lest product-->
+<section class="container-fluid">
+  <h2 class="text-main">{{ "home.popular product" | translate }}</h2>
+  <input
+    [(ngModel)]="textName"
+    type="search"
+    class="w-50 mx-auto form-control my-2"
+    placeholder="Search By Name ......"
+  />
+
+  <div class="row g-3 mt-3">
+    @for (product of productsList.slice(28,40)|search :textName ; track
+    product._id) {
+    <div class="col-md-2">
+      <div class="product p-1">
+        <div class="prt-1" [routerLink]="['/details', product._id]">
+          <img [src]="product.imageCover" class="w-100" [alt]="product.title" />
+          <h3 class="small text-main">{{ product.category.name }}</h3>
+          <p class="h6">{{ product.title | termtext : 2 | titlecase }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span>{{ product.price | currency : "GBP" }}</span>
+            <div class="justify-content-between align-items-center small">
+              @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage); track
+              $index) {
+              <span><i class="fa-solid fa-star rating-color"></i></span> } @if
+              (product.ratingsAverage%1 !== 0) {<i
+                class="fa-regular fa-star-half-stroke rating-color"
+              ></i
+              >}
+              <span class="text-muted">{{ product.ratingsAverage }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center px-2">
+          <button (click)="addCart(product.id)" class="btn-main w-75 rounded-4">
+            Add cart
+          </button>
+          @if (!wishlistIcone.includes(product.id) ) {<span
+            id="button"
+            class="cr"
+            (click)="addProducttoWishlist(product.id)"
+            ><i
+              class="fa-solid fa-heart fa-2xl"
+              style="color: #0dcaf0"
+            ></i></span
+          >} @else {<span
+            id="button"
+            class="cr"
+            (click)="removeWihtWishlist(product.id)"
+          >
+            <i
+              class="fa-solid fa-heart fa-beat-fade fa-2xl"
+              style="color: #ea3434"
+            ></i
+          ></span>
+          }
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>

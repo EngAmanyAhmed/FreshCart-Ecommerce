@@ -1,0 +1,52 @@
+<section class="container p-3 my-2">
+  <h1 class="text-capitalize text-main">details</h1>
+  <div class="row align-items-center">
+    <div class="col-md-3">
+      <div class="img">
+        <img
+          [src]="detailsProducat.imageCover"
+          class="w-100"
+          [alt]="detailsProducat.title"
+        />
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="p-4">
+        <h3 class="h6 text-capitalize">{{ detailsProducat.title }}</h3>
+        <p class="text-muted">{{ detailsProducat.description }}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>{{ detailsProducat.price | currency : "GBP" }}</span>
+          <div class="justify-content-between align-items-center small">
+            @for (num of [1,2,3,4,5].slice(0,detailsProducat.ratingsAverage);
+            track $index) {
+            <span><i class="fa-solid fa-star rating-color"></i></span> } @if
+            (detailsProducat.ratingsAverage%1 !== 0) {<i
+              class="fa-regular fa-star-half-stroke rating-color"
+            ></i
+            >}
+            <span class="text-muted">{{ detailsProducat.ratingsAverage }}</span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn-main w-100 rounded-4"
+        (click)="addCart(detailsProducat._id)"
+      >
+        Add cart
+      </button>
+      <div class="my-2 w-75 mx-auto">
+        <h2 class="text-main">popular</h2>
+        <owl-carousel-o [options]="customOptionspru">
+          @for (cat of detailsProducat.images; track $index) {
+          <ng-template carouselSlide>
+            <div>
+              <img [src]="cat" height="250px" class="w-100" [alt]="" />
+            </div>
+          </ng-template>
+
+          }
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>

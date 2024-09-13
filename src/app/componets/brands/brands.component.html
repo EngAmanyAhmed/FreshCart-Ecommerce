@@ -1,0 +1,61 @@
+<section class="text-center bg-light-main container">
+  <h2 class="h4 text-main">{{ "brands.All Brands:" | translate }}</h2>
+  <div class="row g-3 mt-3 my-2">
+    @for (item of allBrands; track item._id) {
+    <div
+      class="col-md-3 product p-1"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      (click)="getSpecificBrands(item._id)"
+    >
+      <img [src]="item.image" class="w-100" [alt]="item.name" />
+      <p class="p-3">{{ item.name }}</p>
+      @if (modalMy==true) {
+      <!-- Button trigger modal -->
+
+      }
+    </div>
+    }
+  </div>
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            < {{ specificBrands.name }} >
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <img
+            [src]="specificBrands.image"
+            width="300px"
+            height="300px"
+            [alt]="specificBrands.name"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

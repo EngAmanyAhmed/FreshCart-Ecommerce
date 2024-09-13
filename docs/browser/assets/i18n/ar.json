@@ -1,0 +1,72 @@
+{
+    "navbar": {
+        "Home": "الرئيسية",
+        "wish list": "قائمة الرغبات",
+        "Product": "المنتجات",
+        "Categories": "الفئات",
+        "brands": "العلامات التجارية",
+        "SingOut": "تسجيل الخروج",
+        "lang": "اللغة"
+        ,"Register":"تسجيل"
+        ,"Login":"تسجيل الدخول"
+    },
+    "home": {
+        "popular Categorr": "الفئات الشائعة",
+        "popular product": "المنتجات الشائعة",
+        "Search By Name": "البحث بالاسم"
+    },
+    "footer": {
+        "Get The FreshCart App": "احصل على تطبيق فريش كارت",
+        "We Will Send You a Link, Open it on Your Phone to download the app": "سنرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق",
+        "Email": "البريد الإلكتروني",
+        "Share App Link": "مشاركة رابط التطبيق",
+        "Payment partner": "شريك الدفع",
+        "Get Deliveries with FreshCart": "احصل على توصيلات مع فريش كارت"
+    },
+    "wish list": {
+        "My Wish List": "قائمة الرغبات الخاصة بي"
+    },
+    "Product": {
+        "popular product:": "المنتجات الشائعة:",
+        "Search By Name": "البحث بالاسم"
+    },
+    "Categories": {
+        "pupler Categories:": "الفئات الشائعة:"
+    },
+    "brands": {
+        "All Brands:": "جميع العلامات التجارية:"
+    },
+    "Login": {
+        "login Now": "تسجيل الدخول الآن:",
+        "Email:": "البريد الإلكتروني:",
+        "password": "كلمة المرور:",
+        "forgot Password": "نسيت كلمة المرور",
+        "login": "تسجيل الدخول",
+        "Don't have an account?": "ليس لديك حساب؟",
+        "No problem, you can easily create a new account to purchase quickly and track your orders": "لا مشكلة، يمكنك بسهولة إنشاء حساب جديد للشراء بسرعة وتتبع طلباتك",
+        "// Quick and easy purchase": "// شراء سريع وسهل",
+        "// Track your orders": "// تتبع طلباتك",
+        "// Installment tracking": "// تتبع الأقساط",
+        "signup": "التسجيل",
+        "email is required": "البريد الإلكتروني مطلوب",
+        "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+        "password is required": "كلمة المرور مطلوبة",
+        "It must consist of at least 6 letters": "يجب أن تتكون من 6 أحرف على الأقل"
+    },
+    "register": {
+        "name": "الاسم",
+        "Name is required": "الاسم مطلوب",
+        "It must consist of at least 3 letters": "يجب أن يتكون من 3 أحرف على الأقل",
+        "Email": "البريد الإلكتروني",
+        "email is required": "البريد الإلكتروني مطلوب",
+        "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+        "password": "كلمة المرور:",
+        "password is required": "كلمة المرور مطلوبة",
+        "It must consist of at least 6 letters": "يجب أن تتكون من 6 أحرف على الأقل",
+        "rePassword": "تأكيد كلمة المرور",
+        "Password confirmation is incorrect": "تأكيد كلمة المرور غير صحيح",
+        "phone": "الهاتف",
+        "Enter Valid phone": "أدخل رقم هاتف صالحًا",
+        "Register": "تسجيل"
+    }
+}

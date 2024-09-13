@@ -1,0 +1,8 @@
+.product .btn-main {
+  transform: translateY(120%);
+  transition: all 0.7s;
+}
+
+.product:hover .btn-main {
+  transform: translateY(0);
+}/*# sourceMappingURL=home.component.css.map */

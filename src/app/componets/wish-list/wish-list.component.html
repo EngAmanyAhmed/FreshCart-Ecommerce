@@ -1,0 +1,35 @@
+<section class="bg-main-light container my-2 p-5">
+  <h2 class="h3">{{ "wish list.My Wish List" | translate }}</h2>
+
+  @for (cart of allWish; track cart.id) {
+
+  <div class="row justify-content-around align-items-center my-2 border-bottom">
+    <div class="col-md-10">
+      <div class="row my-2 d-flex align-items-center">
+        <div class="col-md-2">
+          <img
+            [src]="cart.imageCover"
+            class="w-100 rounded-3"
+            height="150px"
+            [alt]="cart.title"
+          />
+        </div>
+        <div class="col-md-10">
+          <p>{{ cart.title }}</p>
+          <P class="text-main"> price:{{ cart.price | currency : "GBP" }}</P>
+          <button class="btn btn-danger" (click)="removeWihtWishlist(cart.id)">
+            <span
+              ><i class="fa-solid fa-trash cr" style="color: #ffffff"></i></span
+            ><span> Remove </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 d-flex justify-content-center align-items-center">
+      <button class="btn btn-outline-success" (click)="addCartwish(cart.id)">
+        Add TO cart
+      </button>
+    </div>
+  </div>
+  }
+</section>
